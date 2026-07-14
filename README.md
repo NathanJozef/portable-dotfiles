@@ -14,11 +14,28 @@ The installer:
 
 - Installs system prerequisites with `apt`, `brew`, `apk`, `dnf`, or `pacman` when available.
 - Installs `mise` if it is missing.
-- Installs language and CLI tools from `.config/mise/config.toml`.
+- Installs language and CLI tools from `stow/portable/.config/mise/config.toml`.
 - Installs npm global tools used by the aliases.
-- Symlinks Neovim, mise, yazi, and tmux config into `$HOME`.
+- Stows Neovim, mise, yazi, and tmux config into `$HOME` from `stow/portable`.
 - Adds `source "<repo>/aliases.zsh"` to `~/.zshrc` if missing.
 - Backs up existing config targets before replacing them.
+
+## Stow Layout
+
+Portable home config lives under:
+
+```text
+stow/portable/
+```
+
+For example:
+
+```text
+stow/portable/.config/nvim -> ~/.config/nvim
+stow/portable/.config/mise -> ~/.config/mise
+stow/portable/.config/yazi -> ~/.config/yazi
+stow/portable/.tmux.conf    -> ~/.tmux.conf
+```
 
 ## Included Tools
 

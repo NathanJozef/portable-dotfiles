@@ -46,6 +46,7 @@ install_packages() {
       neovim \
       pkg-config \
       ripgrep \
+      stow \
       tig \
       tmux \
       tree \
@@ -78,6 +79,7 @@ install_packages() {
       neovim \
       pkgconf \
       ripgrep \
+      stow \
       tig \
       tmux \
       tree \
@@ -106,6 +108,7 @@ install_packages() {
       neovim \
       pkgconf-pkg-config \
       ripgrep \
+      stow \
       tig \
       tmux \
       tree \
@@ -133,6 +136,7 @@ install_packages() {
       neovim \
       pkgconf \
       ripgrep \
+      stow \
       tig \
       tmux \
       tree \
@@ -166,7 +170,7 @@ install_mise() {
 
   export PATH="$HOME/.local/share/mise/shims:$HOME/.local/bin:$PATH"
 
-  "$mise_bin" trust "$repo_dir/.config/mise/config.toml" >/dev/null 2>&1 || true
+  "$mise_bin" trust "$repo_dir/stow/portable/.config/mise/config.toml" >/dev/null 2>&1 || true
   "$mise_bin" install --yes
 }
 
@@ -182,19 +186,10 @@ install_npm_tools() {
     pnpm
 }
 
-install_config_link() {
-  local source_path="$1"
-  local target_path="$2"
-
-  mkdir -p "$(dirname "$target_path")"
+backup_stow_target() {
+  local target_path="$1"
 
   if [[ -L "$target_path" ]]; then
-    local current_target
-    current_target="$(readlink "$target_path")"
-    if [[ "$current_target" == "$source_path" ]]; then
-      return
-    fi
-
     rm "$target_path"
   elif [[ -e "$target_path" ]]; then
     local backup_path
@@ -202,15 +197,20 @@ install_config_link() {
     log "Backing up $target_path to $backup_path"
     mv "$target_path" "$backup_path"
   fi
-
-  ln -s "$source_path" "$target_path"
 }
 
 install_configs() {
-  install_config_link "$repo_dir/.config/nvim" "$HOME/.config/nvim"
-  install_config_link "$repo_dir/.config/mise" "$HOME/.config/mise"
-  install_config_link "$repo_dir/.config/yazi" "$HOME/.config/yazi"
-  install_config_link "$repo_dir/.tmux.conf" "$HOME/.tmux.conf"
+  if ! has_command stow; then
+    log "stow not found; skipping config installation"
+    return
+  fi
+
+  backup_stow_target "$HOME/.config/nvim"
+  backup_stow_target "$HOME/.config/mise"
+  backup_stow_target "$HOME/.config/yazi"
+  backup_stow_target "$HOME/.tmux.conf"
+
+  stow --dir="$repo_dir/stow" --target="$HOME" --restow portable
 
   local zshrc="$HOME/.zshrc"
   local source_line="source \"$repo_dir/aliases.zsh\""
