@@ -75,6 +75,7 @@ Shell setup includes:
 - `lazydocker`
 - `lazygit`
 - `neovim`
+- `opencode`
 - `ripgrep`
 - `tmux`
 - `yazi`

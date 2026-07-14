@@ -133,7 +133,7 @@ install_mise() {
   "$mise_bin" trust "$HOME/.config/mise/config.toml" >/dev/null 2>&1 || true
   "$mise_bin" install --yes --locked --cd "$HOME"
 
-  local required_commands=(eza nvim lazygit lazydocker yazi zoxide)
+  local required_commands=(eza nvim lazygit lazydocker opencode yazi zoxide)
   local command_name
   for command_name in "${required_commands[@]}"; do
     if ! "$mise_bin" which --cd "$HOME" "$command_name" >/dev/null 2>&1; then
