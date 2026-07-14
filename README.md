@@ -67,6 +67,7 @@ System/package-manager tools include:
 - `java`
 - `k9s`
 - `kubectl`
+- `lazydocker`
 - `neovim`
 - `node`
 - `npm`
