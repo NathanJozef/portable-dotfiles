@@ -1,0 +1,17 @@
+[tools]
+awscli = { version = "latest", symlink_bins = "true" }
+aws-sam-cli = { version = "latest", symlink_bins = "true" }
+devcontainer-cli = "latest"
+eza = "latest"
+go = "latest"
+helm = "latest"
+java = "latest"
+k9s = "latest"
+kubectl = "latest"
+node = "latest"
+npm = "latest"
+pnpm = "latest"
+python = "latest"
+rust = "latest"
+terraform = "latest"
+yazi = "latest"

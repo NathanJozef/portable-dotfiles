@@ -1,0 +1,70 @@
+# Portable Dotfiles
+
+Generic development dotfiles for dev containers, Codespaces, and disposable Linux/macOS environments.
+
+This repo intentionally excludes machine-specific and sensitive setup from the main dotfiles repo, including SSH config, AWS config/credentials, GPG key setup, pgpass, netrc, host-specific stow logic, and desktop app configuration.
+
+## Install
+
+```bash
+./install.sh
+```
+
+The installer:
+
+- Installs system prerequisites with `apt`, `brew`, `apk`, `dnf`, or `pacman` when available.
+- Installs `mise` if it is missing.
+- Installs language and CLI tools from `.config/mise/config.toml`.
+- Installs npm global tools used by the aliases.
+- Symlinks Neovim, mise, yazi, and tmux config into `$HOME`.
+- Adds `source "<repo>/aliases.zsh"` to `~/.zshrc` if missing.
+- Backs up existing config targets before replacing them.
+
+## Included Tools
+
+System/package-manager tools include:
+
+- `bash`
+- `curl`
+- `fd`
+- `fzf`
+- `git`
+- `gnupg`
+- `htop`
+- `jq`
+- `neovim`
+- `ripgrep`
+- `tig`
+- `tmux`
+- `tree`
+- `zoxide`
+- `zsh`
+
+`mise` installs:
+
+- `awscli`
+- `aws-sam-cli`
+- `devcontainer-cli`
+- `eza`
+- `go`
+- `helm`
+- `java`
+- `k9s`
+- `kubectl`
+- `node`
+- `npm`
+- `pnpm`
+- `python`
+- `rust`
+- `terraform`
+- `yazi`
+
+Homebrew also installs `circumflex`, `mise`, `opencode`, and `stow`.
+
+## Shell Aliases
+
+Aliases live in `aliases.zsh` and include `eza`-backed `ls`, Python aliases, a small npm wrapper using `npq`, Git helpers, `mise` activation, and `zoxide` activation.
+
+## Neovim
+
+The Neovim setup is copied from the non-sensitive shared config in the main dotfiles repo. It uses `lazy.nvim`, `mason`, `treesitter`, `telescope`, `gitsigns`, `diffview`, `neo-tree`, `harpoon`, and `conform`.
