@@ -13,9 +13,10 @@ This repo intentionally excludes machine-specific and sensitive setup from the m
 The installer:
 
 - Installs system prerequisites with `apt`, `apk`, `dnf`, or `pacman` when available.
+- Runs concern-specific install scripts from `install/`, starting with `install/zsh.sh`.
+- Installs Powerline fonts, Oh My Zsh, the agnoster theme, and zsh plugins from `install/zsh.sh`.
 - Installs `mise` if it is missing.
-- Installs language and CLI tools from `stow/portable/.config/mise/config.toml` using the checked-in `stow/portable/.config/mise/mise.lock`.
-- Installs npm global tools used by the aliases.
+- Installs CLI tools from `stow/portable/.config/mise/config.toml` using the checked-in `stow/portable/.config/mise/mise.lock`.
 - Stows Neovim, mise, yazi, and tmux config into `$HOME` from `stow/portable`.
 - Adds `source "<repo>/aliases.zsh"` to `~/.zshrc` if missing.
 - Backs up existing config targets before replacing them.
@@ -49,6 +50,14 @@ System/package-manager tools include:
 - `tig`
 - `tree`
 - `zsh`
+
+Shell setup includes:
+
+- Powerline fonts
+- Oh My Zsh
+- `agnoster` prompt theme
+- `zsh-autosuggestions`
+- `zsh-syntax-highlighting`
 
 `mise` installs:
 

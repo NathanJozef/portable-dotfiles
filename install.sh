@@ -11,6 +11,16 @@ has_command() {
   command -v "$1" >/dev/null 2>&1
 }
 
+append_once() {
+  local file="$1"
+  local line="$2"
+
+  touch "$file"
+  if ! grep -Fqx "$line" "$file"; then
+    printf '%s\n' "$line" >> "$file"
+  fi
+}
+
 as_root() {
   if [[ "${EUID}" -eq 0 ]]; then
     "$@"
@@ -149,14 +159,12 @@ install_configs() {
   local zshrc="$HOME/.zshrc"
   local source_line="source \"$repo_dir/aliases.zsh\""
 
-  touch "$zshrc"
-  if ! grep -Fqx "$source_line" "$zshrc"; then
-    printf '\n%s\n' "$source_line" >> "$zshrc"
-  fi
+  append_once "$zshrc" "$source_line"
 }
 
 main() {
   install_packages
+  "$repo_dir/install/zsh.sh"
   install_configs
   install_mise
 

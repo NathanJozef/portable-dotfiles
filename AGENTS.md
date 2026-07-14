@@ -15,6 +15,7 @@ This repository contains generic, non-sensitive development setup for dev contai
 
 - Keep changes small and explicit.
 - Preserve simple shell scripts over introducing frameworks.
+- Keep `install.sh` as the top-level orchestrator and split concern-specific setup into scripts under `install/`.
 - Make installers idempotent where practical.
 - Back up existing user files before replacing or symlinking them.
 - Avoid destructive cleanup commands.
@@ -22,5 +23,6 @@ This repository contains generic, non-sensitive development setup for dev contai
 ## Verification
 
 - Run `bash -n install.sh` after editing the installer.
+- Run `bash -n install/*.sh` after editing concern-specific install scripts.
 - Run `zsh -n aliases.zsh` after editing shell aliases.
 - Do not run the installer automatically unless explicitly requested.
