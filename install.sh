@@ -125,6 +125,7 @@ install_mise() {
   fi
 
   export PATH="$HOME/.local/bin:$HOME/.local/share/mise/shims:$PATH"
+  export MISE_GLOBAL_CONFIG_FILE="$HOME/.config/mise/config.toml"
 
   "$mise_bin" trust "$repo_dir/mise.toml" >/dev/null 2>&1 || true
   "$mise_bin" install --yes --locked --cd "$repo_dir"

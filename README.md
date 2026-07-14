@@ -18,6 +18,7 @@ The installer:
 - Installs `mise` if it is missing.
 - Installs CLI tools from root `mise.toml` using the checked-in root `mise.lock`.
 - Stows and installs the matching global mise config from `stow/portable/.config/mise/config.toml` and `stow/portable/.config/mise/mise.lock` so those tools are available in any workspace.
+- Exports `MISE_GLOBAL_CONFIG_FILE="$HOME/.config/mise/config.toml"` so devcontainer-provided mise shims resolve the portable global tools.
 - Stows Neovim, mise, yazi, and tmux config into `$HOME` from `stow/portable`.
 - Adds `source "<repo>/aliases.zsh"` to `~/.zshrc` if missing.
 - Backs up existing config targets before replacing them.

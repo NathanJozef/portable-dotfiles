@@ -12,6 +12,7 @@ alias git-force-push='git push --force-with-lease'
 alias git-amend-commit='git commit --amend --no-edit'
 
 export PATH="$HOME/.local/bin:$HOME/.local/share/mise/shims:$PATH"
+export MISE_GLOBAL_CONFIG_FILE="$HOME/.config/mise/config.toml"
 
 # Tool initialization
 if command -v mise >/dev/null 2>&1; then
