@@ -8,6 +8,14 @@ return {
   },
   lazy = false,
   opts = {
+    sources = {
+      "filesystem",
+      "buffers",
+      "git_status",
+    },
+    source_selector = {
+      winbar = true,
+    },
     filesystem = {
       filtered_items = {
         visible = true,
