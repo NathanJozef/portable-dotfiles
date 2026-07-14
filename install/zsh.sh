@@ -50,11 +50,16 @@ main() {
     git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git "$custom_dir/plugins/zsh-syntax-highlighting"
   fi
 
+  if [[ ! -d "$custom_dir/themes/powerlevel10k" ]]; then
+    git clone --depth 1 https://github.com/romkatv/powerlevel10k.git "$custom_dir/themes/powerlevel10k"
+  fi
+
   local zshrc="$HOME/.zshrc"
   append_once "$zshrc" 'export ZSH="$HOME/.oh-my-zsh"'
-  append_once "$zshrc" 'ZSH_THEME="agnoster"'
+  append_once "$zshrc" 'ZSH_THEME="powerlevel10k/powerlevel10k"'
   append_once "$zshrc" 'plugins=(git zsh-autosuggestions zsh-syntax-highlighting)'
   append_once "$zshrc" 'source "$ZSH/oh-my-zsh.sh"'
+  append_once "$zshrc" '[[ -f ~/.p10k.zsh && -z "${PORTABLE_DOTFILES_P10K_LOADED:-}" ]] && source ~/.p10k.zsh && export PORTABLE_DOTFILES_P10K_LOADED=1'
 }
 
 main "$@"

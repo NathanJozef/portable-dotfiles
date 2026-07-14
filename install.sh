@@ -166,6 +166,7 @@ install_configs() {
   backup_stow_target "$HOME/.config/mise"
   backup_stow_target "$HOME/.config/yazi"
   backup_stow_target "$HOME/.tmux.conf"
+  backup_stow_target "$HOME/.p10k.zsh"
 
   stow --dir="$repo_dir/stow" --target="$HOME" --restow portable
 

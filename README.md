@@ -14,14 +14,14 @@ The installer:
 
 - Installs system prerequisites with `apt`, `apk`, `dnf`, or `pacman` when available.
 - Runs concern-specific install scripts from `install/`, starting with `install/zsh.sh`.
-- Installs Powerline fonts, Oh My Zsh, the agnoster theme, and zsh plugins from `install/zsh.sh`.
+- Installs Powerline fonts, Oh My Zsh, Powerlevel10k, and zsh plugins from `install/zsh.sh`.
 - Installs `mise` if it is missing.
 - Installs CLI tools from root `mise.toml` using the checked-in root `mise.lock`.
 - Stows and installs the matching global mise config from `stow/portable/.config/mise/config.toml` and `stow/portable/.config/mise/mise.lock` so those tools are available in any workspace.
 - Exports `MISE_GLOBAL_CONFIG_FILE="$HOME/.config/mise/config.toml"` so devcontainer-provided mise shims resolve the portable global tools.
 - Imports mounted `~/.zsh_history` into Atuin once from `install/atuin.sh` when Atuin is available.
 - Stows Neovim, mise, yazi, and tmux config into `$HOME` from `stow/portable`.
-- Adds `source "<repo>/aliases.zsh"` to `~/.zshrc` if missing.
+- Adds `source "<repo>/aliases.zsh"` to `~/.zshrc` if missing, which also sources the stowed Powerlevel10k config.
 - Backs up existing config targets before replacing them.
 
 ## Stow Layout
@@ -39,6 +39,7 @@ stow/portable/.config/nvim -> ~/.config/nvim
 stow/portable/.config/mise -> ~/.config/mise
 stow/portable/.config/yazi -> ~/.config/yazi
 stow/portable/.tmux.conf    -> ~/.tmux.conf
+stow/portable/.p10k.zsh     -> ~/.p10k.zsh
 ```
 
 ## Included Tools
@@ -58,7 +59,7 @@ Shell setup includes:
 
 - Powerline fonts
 - Oh My Zsh
-- `agnoster` prompt theme
+- Powerlevel10k prompt theme
 - `zsh-autosuggestions`
 - `zsh-syntax-highlighting`
 
@@ -81,7 +82,7 @@ Shell setup includes:
 
 ## Shell Aliases
 
-Aliases live in `aliases.zsh` and include `eza`-backed `ls`, Git helpers, `mise` activation, and `zoxide` activation.
+Aliases live in `aliases.zsh` and include `eza`-backed `ls`, Git helpers, Powerlevel10k config loading, `mise` activation, and `zoxide` activation.
 
 ## Neovim
 
