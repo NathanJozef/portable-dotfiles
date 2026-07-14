@@ -17,21 +17,6 @@ checksum = "sha256:0ff7c20a6edaf00c9a20ab0bfa4db890a84a56630bb4adb8045be6a94e46e
 url = "https://github.com/atuinsh/atuin/releases/download/v18.17.0/atuin-x86_64-unknown-linux-musl.tar.gz"
 provenance = "github-attestations"
 
-[[tools.aws-sam-cli]]
-version = "1.163.0"
-backend = "aqua:aws/aws-sam-cli"
-
-[tools.aws-sam-cli."platforms.linux-x64"]
-checksum = "sha256:3f12863f45da82bc2ad1fb837444cca57450bd07fef73449b917362ef2f5ab70"
-url = "https://github.com/aws/aws-sam-cli/releases/download/v1.163.0/aws-sam-cli-linux-x86_64.zip"
-
-[[tools.awscli]]
-version = "2.35.13"
-backend = "aqua:aws/aws-cli"
-
-[tools.awscli."platforms.linux-x64"]
-url = "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.35.13.zip"
-
 [[tools.eza]]
 version = "0.23.5"
 backend = "aqua:eza-community/eza"
@@ -55,14 +40,6 @@ backend = "aqua:junegunn/fzf"
 [tools.fzf."platforms.linux-x64"]
 checksum = "sha256:cf919f05b7581b4c744d764eaa704665d61dd6d3ca785f0df2351281dff60cda"
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.0/fzf-0.74.0-linux_amd64.tar.gz"
-
-[[tools.helm]]
-version = "4.2.2"
-backend = "aqua:helm/helm"
-
-[tools.helm."platforms.linux-x64"]
-checksum = "sha256:9adafecab4d406853bba163a70e9f104f47dbbf65ce24b7653bae7e36150bcb6"
-url = "https://get.helm.sh/helm-v4.2.2-linux-amd64.tar.gz"
 
 [[tools.jq]]
 version = "1.8.2"
@@ -112,14 +89,6 @@ backend = "aqua:BurntSushi/ripgrep"
 [tools.ripgrep."platforms.linux-x64"]
 checksum = "sha256:1c9297be4a084eea7ecaedf93eb03d058d6faae29bbc57ecdaf5063921491599"
 url = "https://github.com/BurntSushi/ripgrep/releases/download/15.1.0/ripgrep-15.1.0-x86_64-unknown-linux-musl.tar.gz"
-
-[[tools.terraform]]
-version = "1.15.7"
-backend = "aqua:hashicorp/terraform"
-
-[tools.terraform."platforms.linux-x64"]
-checksum = "sha256:73bbb8f5188ad75d4fb853fd100ae4d7e146ef7af7db18776109642fdb7759d2"
-url = "https://releases.hashicorp.com/terraform/1.15.7/terraform_1.15.7_linux_amd64.zip"
 
 [[tools.tmux]]
 version = "3.7b"

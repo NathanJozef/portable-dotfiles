@@ -65,12 +65,9 @@ Shell setup includes:
 `mise` installs:
 
 - `atuin`
-- `awscli`
-- `aws-sam-cli`
 - `eza`
 - `fd`
 - `fzf`
-- `helm`
 - `jq`
 - `k9s`
 - `kubectl`
@@ -78,7 +75,6 @@ Shell setup includes:
 - `lazygit`
 - `neovim`
 - `ripgrep`
-- `terraform`
 - `tmux`
 - `yazi`
 - `zoxide`
