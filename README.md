@@ -63,9 +63,9 @@ Shell setup includes:
 
 `mise` installs:
 
+- `atuin`
 - `awscli`
 - `aws-sam-cli`
-- `devcontainer-cli`
 - `eza`
 - `fd`
 - `fzf`
