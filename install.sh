@@ -180,6 +180,7 @@ main() {
   "$repo_dir/install/zsh.sh"
   install_configs
   install_mise
+  "$repo_dir/install/atuin.sh"
 
   log "Install complete. Restart your shell or run: source ~/.zshrc"
 }
