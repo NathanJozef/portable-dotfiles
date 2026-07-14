@@ -11,6 +11,8 @@ alias gitroot='git rev-parse --show-toplevel'
 alias git-force-push='git push --force-with-lease'
 alias git-amend-commit='git commit --amend --no-edit'
 
+export PATH="$HOME/.local/bin:$HOME/.local/share/mise/shims:$PATH"
+
 # Tool initialization
 if command -v mise >/dev/null 2>&1; then
     eval "$(mise activate zsh)"
@@ -19,5 +21,3 @@ fi
 if command -v zoxide >/dev/null 2>&1; then
     eval "$(zoxide init zsh)"
 fi
-
-export PATH="$HOME/.local/bin:$PATH"

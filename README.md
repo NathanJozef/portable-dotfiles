@@ -16,7 +16,8 @@ The installer:
 - Runs concern-specific install scripts from `install/`, starting with `install/zsh.sh`.
 - Installs Powerline fonts, Oh My Zsh, the agnoster theme, and zsh plugins from `install/zsh.sh`.
 - Installs `mise` if it is missing.
-- Installs CLI tools from `stow/portable/.config/mise/config.toml` using the checked-in `stow/portable/.config/mise/mise.lock`.
+- Installs CLI tools from root `mise.toml` using the checked-in root `mise.lock`.
+- Stows the matching global mise config from `stow/portable/.config/mise/config.toml` so those tools are available in any workspace.
 - Stows Neovim, mise, yazi, and tmux config into `$HOME` from `stow/portable`.
 - Adds `source "<repo>/aliases.zsh"` to `~/.zshrc` if missing.
 - Backs up existing config targets before replacing them.
@@ -72,6 +73,7 @@ Shell setup includes:
 - `k9s`
 - `kubectl`
 - `lazydocker`
+- `lazygit`
 - `neovim`
 - `ripgrep`
 - `terraform`

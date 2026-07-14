@@ -124,10 +124,19 @@ install_mise() {
     return 1
   fi
 
-  export PATH="$HOME/.local/share/mise/shims:$HOME/.local/bin:$PATH"
+  export PATH="$HOME/.local/bin:$HOME/.local/share/mise/shims:$PATH"
 
-  "$mise_bin" trust "$repo_dir/stow/portable/.config/mise/config.toml" >/dev/null 2>&1 || true
-  "$mise_bin" install --yes --locked
+  "$mise_bin" trust "$repo_dir/mise.toml" >/dev/null 2>&1 || true
+  "$mise_bin" install --yes --locked --cd "$repo_dir"
+
+  local required_commands=(eza nvim lazygit lazydocker yazi zoxide)
+  local command_name
+  for command_name in "${required_commands[@]}"; do
+    if ! "$mise_bin" which --cd "$repo_dir" "$command_name" >/dev/null 2>&1; then
+      log "mise did not install required command: $command_name"
+      return 1
+    fi
+  done
 }
 
 backup_stow_target() {
