@@ -49,7 +49,6 @@ System/package-manager tools include:
 - `gnupg`
 - `htop`
 - `jq`
-- `neovim`
 - `ripgrep`
 - `tig`
 - `tmux`
@@ -68,6 +67,7 @@ System/package-manager tools include:
 - `java`
 - `k9s`
 - `kubectl`
+- `neovim`
 - `node`
 - `npm`
 - `pnpm`
@@ -84,4 +84,4 @@ Aliases live in `aliases.zsh` and include `eza`-backed `ls`, Python aliases, a s
 
 ## Neovim
 
-The Neovim setup is copied from the non-sensitive shared config in the main dotfiles repo. It uses `lazy.nvim`, `mason`, `treesitter`, `telescope`, `gitsigns`, `diffview`, `neo-tree`, `harpoon`, and `conform`.
+The Neovim binary is installed by `mise`. The Neovim config is copied from the non-sensitive shared config in the main dotfiles repo and stowed from `stow/portable/.config/nvim`. It uses `lazy.nvim`, `mason`, `treesitter`, `telescope`, `gitsigns`, `diffview`, `neo-tree`, `harpoon`, and `conform`.

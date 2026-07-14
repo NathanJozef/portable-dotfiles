@@ -43,7 +43,6 @@ install_packages() {
       htop \
       jq \
       make \
-      neovim \
       pkg-config \
       ripgrep \
       stow \
@@ -76,7 +75,6 @@ install_packages() {
       htop \
       jq \
       make \
-      neovim \
       pkgconf \
       ripgrep \
       stow \
@@ -105,7 +103,6 @@ install_packages() {
       htop \
       jq \
       make \
-      neovim \
       pkgconf-pkg-config \
       ripgrep \
       stow \
@@ -133,7 +130,6 @@ install_packages() {
       htop \
       jq \
       make \
-      neovim \
       pkgconf \
       ripgrep \
       stow \
