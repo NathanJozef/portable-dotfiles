@@ -129,10 +129,13 @@ install_mise() {
   "$mise_bin" trust "$repo_dir/mise.toml" >/dev/null 2>&1 || true
   "$mise_bin" install --yes --locked --cd "$repo_dir"
 
+  "$mise_bin" trust "$HOME/.config/mise/config.toml" >/dev/null 2>&1 || true
+  "$mise_bin" install --yes --locked --cd "$HOME"
+
   local required_commands=(eza nvim lazygit lazydocker yazi zoxide)
   local command_name
   for command_name in "${required_commands[@]}"; do
-    if ! "$mise_bin" which --cd "$repo_dir" "$command_name" >/dev/null 2>&1; then
+    if ! "$mise_bin" which --cd "$HOME" "$command_name" >/dev/null 2>&1; then
       log "mise did not install required command: $command_name"
       return 1
     fi

@@ -8,6 +8,33 @@ backend = "aqua:neovim/neovim"
 checksum = "sha256:012bf3fcac5ade43914df3f174668bf64d05e049a4f032a388c027b1ebd78628"
 url = "https://github.com/neovim/neovim/releases/download/v0.12.4/nvim-linux-x86_64.tar.gz"
 
+[[tools.aws-sam-cli]]
+version = "1.163.0"
+backend = "aqua:aws/aws-sam-cli"
+
+[tools.aws-sam-cli."platforms.linux-x64"]
+checksum = "sha256:3f12863f45da82bc2ad1fb837444cca57450bd07fef73449b917362ef2f5ab70"
+url = "https://github.com/aws/aws-sam-cli/releases/download/v1.163.0/aws-sam-cli-linux-x86_64.zip"
+
+[[tools.awscli]]
+version = "2.35.13"
+backend = "aqua:aws/aws-cli"
+
+[tools.awscli."platforms.linux-x64"]
+url = "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.35.13.zip"
+
+[[tools.devcontainer-cli]]
+version = "0.87.0"
+backend = "npm:@devcontainers/cli"
+
+[[tools.eza]]
+version = "0.23.5"
+backend = "aqua:eza-community/eza"
+
+[tools.eza."platforms.linux-x64"]
+checksum = "sha256:e06eebab74b73d6b7d51a796a353824b001bea82df077706382e100815d28904"
+url = "https://github.com/eza-community/eza/releases/download/v0.23.5/eza_x86_64-unknown-linux-musl.tar.gz"
+
 [[tools.fd]]
 version = "10.4.2"
 backend = "aqua:sharkdp/fd"
@@ -24,6 +51,14 @@ backend = "aqua:junegunn/fzf"
 checksum = "sha256:cf919f05b7581b4c744d764eaa704665d61dd6d3ca785f0df2351281dff60cda"
 url = "https://github.com/junegunn/fzf/releases/download/v0.74.0/fzf-0.74.0-linux_amd64.tar.gz"
 
+[[tools.helm]]
+version = "4.2.2"
+backend = "aqua:helm/helm"
+
+[tools.helm."platforms.linux-x64"]
+checksum = "sha256:9adafecab4d406853bba163a70e9f104f47dbbf65ce24b7653bae7e36150bcb6"
+url = "https://get.helm.sh/helm-v4.2.2-linux-amd64.tar.gz"
+
 [[tools.jq]]
 version = "1.8.2"
 backend = "aqua:jqlang/jq"
@@ -32,6 +67,30 @@ backend = "aqua:jqlang/jq"
 checksum = "sha256:b1c22172dd303f3be49e935aa56aa48a8b7a46e0bc838b4997d3bb451495870f"
 url = "https://github.com/jqlang/jq/releases/download/jq-1.8.2/jq-linux-amd64"
 provenance = "github-attestations"
+
+[[tools.k9s]]
+version = "0.51.0"
+backend = "aqua:derailed/k9s"
+
+[tools.k9s."platforms.linux-x64"]
+checksum = "sha256:c3752ad51a5a4015a113819c4eeb6e55a4d0e4b8e652494797532f6fc8161dd7"
+url = "https://github.com/derailed/k9s/releases/download/v0.51.0/k9s_Linux_amd64.tar.gz"
+
+[[tools.kubectl]]
+version = "1.36.2"
+backend = "aqua:kubernetes/kubernetes/kubectl"
+
+[tools.kubectl."platforms.linux-x64"]
+checksum = "sha256:1e9045ec32bea85da43de85f0065358529ea7c7a152eca78154fba5b58c27d82"
+url = "https://dl.k8s.io/v1.36.2/bin/linux/amd64/kubectl"
+
+[[tools.lazydocker]]
+version = "0.25.2"
+backend = "aqua:jesseduffield/lazydocker"
+
+[tools.lazydocker."platforms.linux-x64"]
+checksum = "sha256:0d9dbfc26068b218e7ed84b104748cadc6e3cf733c0afd35465306fb39b9523c"
+url = "https://github.com/jesseduffield/lazydocker/releases/download/v0.25.2/lazydocker_0.25.2_Linux_x86_64.tar.gz"
 
 [[tools.lazygit]]
 version = "0.63.0"
@@ -48,6 +107,14 @@ backend = "aqua:BurntSushi/ripgrep"
 [tools.ripgrep."platforms.linux-x64"]
 checksum = "sha256:1c9297be4a084eea7ecaedf93eb03d058d6faae29bbc57ecdaf5063921491599"
 url = "https://github.com/BurntSushi/ripgrep/releases/download/15.1.0/ripgrep-15.1.0-x86_64-unknown-linux-musl.tar.gz"
+
+[[tools.terraform]]
+version = "1.15.7"
+backend = "aqua:hashicorp/terraform"
+
+[tools.terraform."platforms.linux-x64"]
+checksum = "sha256:73bbb8f5188ad75d4fb853fd100ae4d7e146ef7af7db18776109642fdb7759d2"
+url = "https://releases.hashicorp.com/terraform/1.15.7/terraform_1.15.7_linux_amd64.zip"
 
 [[tools.tmux]]
 version = "3.7b"
