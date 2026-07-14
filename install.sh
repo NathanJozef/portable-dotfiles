@@ -32,58 +32,31 @@ install_packages() {
     as_root apt-get update
     as_root apt-get install -y \
       bash \
-      build-essential \
       ca-certificates \
-      cmake \
       curl \
-      fd-find \
-      fzf \
       git \
       gnupg \
-      htop \
-      jq \
-      make \
-      pkg-config \
-      ripgrep \
       stow \
       tig \
-      tmux \
       tree \
       unzip \
       xz-utils \
-      zoxide \
       zsh
-    return
-  fi
-
-  if has_command brew; then
-    brew bundle --file="$repo_dir/Brewfile"
     return
   fi
 
   if has_command apk; then
     as_root apk add --no-cache \
       bash \
-      build-base \
       ca-certificates \
-      cmake \
       curl \
-      fd \
-      fzf \
       git \
       gnupg \
-      htop \
-      jq \
-      make \
-      pkgconf \
-      ripgrep \
       stow \
       tig \
-      tmux \
       tree \
       unzip \
       xz \
-      zoxide \
       zsh
     return
   fi
@@ -92,53 +65,30 @@ install_packages() {
     as_root dnf install -y \
       bash \
       ca-certificates \
-      cmake \
       curl \
-      fd-find \
-      fzf \
-      gcc \
-      gcc-c++ \
       git \
       gnupg2 \
-      htop \
-      jq \
-      make \
-      pkgconf-pkg-config \
-      ripgrep \
       stow \
       tig \
-      tmux \
       tree \
       unzip \
       xz \
-      zoxide \
       zsh
     return
   fi
 
   if has_command pacman; then
     as_root pacman -Sy --needed --noconfirm \
-      base-devel \
       bash \
       ca-certificates \
-      cmake \
       curl \
-      fd \
-      fzf \
       git \
       gnupg \
-      htop \
-      jq \
-      make \
-      pkgconf \
-      ripgrep \
       stow \
       tig \
-      tmux \
       tree \
       unzip \
       xz \
-      zoxide \
       zsh
     return
   fi
@@ -167,19 +117,7 @@ install_mise() {
   export PATH="$HOME/.local/share/mise/shims:$HOME/.local/bin:$PATH"
 
   "$mise_bin" trust "$repo_dir/stow/portable/.config/mise/config.toml" >/dev/null 2>&1 || true
-  "$mise_bin" install --yes
-}
-
-install_npm_tools() {
-  if ! has_command npm; then
-    log "npm not found; skipping npm global tools"
-    return
-  fi
-
-  npm install --global \
-    @devcontainers/cli \
-    npq \
-    pnpm
+  "$mise_bin" install --yes --locked
 }
 
 backup_stow_target() {
@@ -221,7 +159,6 @@ main() {
   install_packages
   install_configs
   install_mise
-  install_npm_tools
 
   log "Install complete. Restart your shell or run: source ~/.zshrc"
 }

@@ -1,6 +1,6 @@
 # Portable Dotfiles
 
-Generic development dotfiles for dev containers, Codespaces, and disposable Linux/macOS environments.
+Generic development dotfiles for dev containers, Codespaces, and disposable Linux environments. The primary target is running inside a dev container, so this setup intentionally avoids installing language runtimes and toolchains that should come from the dev container image.
 
 This repo intentionally excludes machine-specific and sensitive setup from the main dotfiles repo, including SSH config, AWS config/credentials, GPG key setup, pgpass, netrc, host-specific stow logic, and desktop app configuration.
 
@@ -12,9 +12,9 @@ This repo intentionally excludes machine-specific and sensitive setup from the m
 
 The installer:
 
-- Installs system prerequisites with `apt`, `brew`, `apk`, `dnf`, or `pacman` when available.
+- Installs system prerequisites with `apt`, `apk`, `dnf`, or `pacman` when available.
 - Installs `mise` if it is missing.
-- Installs language and CLI tools from `stow/portable/.config/mise/config.toml`.
+- Installs language and CLI tools from `stow/portable/.config/mise/config.toml` using the checked-in `stow/portable/.config/mise/mise.lock`.
 - Installs npm global tools used by the aliases.
 - Stows Neovim, mise, yazi, and tmux config into `$HOME` from `stow/portable`.
 - Adds `source "<repo>/aliases.zsh"` to `~/.zshrc` if missing.
@@ -43,17 +43,11 @@ System/package-manager tools include:
 
 - `bash`
 - `curl`
-- `fd`
-- `fzf`
 - `git`
 - `gnupg`
-- `htop`
-- `jq`
-- `ripgrep`
+- `stow`
 - `tig`
-- `tmux`
 - `tree`
-- `zoxide`
 - `zsh`
 
 `mise` installs:
@@ -62,26 +56,23 @@ System/package-manager tools include:
 - `aws-sam-cli`
 - `devcontainer-cli`
 - `eza`
-- `go`
+- `fd`
+- `fzf`
 - `helm`
-- `java`
+- `jq`
 - `k9s`
 - `kubectl`
 - `lazydocker`
 - `neovim`
-- `node`
-- `npm`
-- `pnpm`
-- `python`
-- `rust`
+- `ripgrep`
 - `terraform`
+- `tmux`
 - `yazi`
-
-Homebrew also installs `circumflex`, `mise`, `opencode`, and `stow`.
+- `zoxide`
 
 ## Shell Aliases
 
-Aliases live in `aliases.zsh` and include `eza`-backed `ls`, Python aliases, a small npm wrapper using `npq`, Git helpers, `mise` activation, and `zoxide` activation.
+Aliases live in `aliases.zsh` and include `eza`-backed `ls`, Git helpers, `mise` activation, and `zoxide` activation.
 
 ## Neovim
 

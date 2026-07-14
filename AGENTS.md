@@ -1,13 +1,15 @@
 # Portable Dotfiles Repository
 
-This repository contains generic, non-sensitive development setup for dev containers, Codespaces, and disposable development environments.
+This repository contains generic, non-sensitive development setup for dev containers, Codespaces, and disposable development environments. Assume the installer is primarily run from inside a dev container, not on a long-lived host machine.
 
 ## Scope
 
 - Keep this repo portable and safe to make public.
 - Do not add secrets, tokens, private keys, credentials, hostnames, work-specific endpoints, account IDs, or machine-specific branches.
 - Do not copy SSH config, AWS config/credentials, GPG private material, `.netrc`, `.pgpass`, npm tokens, or generated machine state from other dotfiles repos.
-- Prefer generic Linux/dev-container behavior. macOS/Homebrew support is fine when it stays optional and portable.
+- Prefer generic Linux/dev-container behavior. Do not add Homebrew/macOS-specific install paths to the portable setup.
+- Avoid assumptions about host-level services, desktop apps, systemd, SSH agents, GUI clipboard tools, or machine-specific paths.
+- Installer changes should work in minimal containers where the user may be root or may have `sudo`.
 
 ## Editing Guidance
 
