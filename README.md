@@ -74,6 +74,7 @@ Shell setup includes:
 - `kubectl`
 - `lazydocker`
 - `lazygit`
+- `lazysql`
 - `neovim`
 - `opencode`
 - `ripgrep`
