@@ -2,6 +2,10 @@ require("config.lazy")
 
 vim.o.autoread = true
 vim.o.signcolumn = "yes"
+vim.o.cmdheight = 1
+vim.o.termguicolors = true
+vim.cmd("syntax enable")
+vim.cmd.colorscheme("habamax")
 
 local function open_line_diagnostic()
   local _, winid = vim.diagnostic.open_float({ scope = "line", border = "rounded", source = true })
