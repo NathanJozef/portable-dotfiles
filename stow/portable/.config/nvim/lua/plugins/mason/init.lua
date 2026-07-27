@@ -16,6 +16,24 @@ return {
         "ts_ls",
       },
     })
+
+    vim.lsp.config("lua_ls", {
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { "vim" },
+          },
+          runtime = {
+            version = "LuaJIT",
+          },
+          workspace = {
+            checkThirdParty = false,
+            library = vim.api.nvim_get_runtime_file("", true),
+          },
+        },
+      },
+    })
+
     require("mason-tool-installer").setup({
       ensure_installed = {
         "goimports",
