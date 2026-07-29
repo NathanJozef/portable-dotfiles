@@ -8,7 +8,7 @@ return {
     },
     keys = {
       { "K", "<cmd>Lspsaga hover_doc<CR>", desc = "Hover docs" },
-      { "<C-s>", "<cmd>Lspsaga signature_help<CR>", mode = { "n", "i" }, desc = "Signature help" },
+      { "<C-s>", vim.lsp.buf.signature_help, mode = { "n", "i" }, desc = "Signature help" },
     },
     opts = {
       ui = {
