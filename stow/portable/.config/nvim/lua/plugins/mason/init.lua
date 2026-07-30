@@ -13,7 +13,6 @@ return {
         "gopls",
         "lua_ls",
         "pyright",
-        "ts_ls",
       },
     })
 
