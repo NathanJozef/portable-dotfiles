@@ -16,7 +16,7 @@ The installer:
 - Runs concern-specific install scripts from `install/`, starting with `install/zsh.sh`.
 - Installs Powerline fonts, Oh My Zsh, Powerlevel10k, and zsh plugins from `install/zsh.sh`.
 - Installs `mise` if it is missing.
-- Stows and installs the global mise config from `stow/portable/.config/mise/config.toml` and `stow/portable/.config/mise/mise.lock` so those tools are available in any workspace.
+- Stows and installs the global mise config from `stow/portable/.config/mise/config.toml` and `stow/portable/.config/mise/mise.lock` so those tools are available in any workspace. These files are copied from the main dotfiles mise config by `support-scripts/export-portable-dotfiles.zsh`; they are not maintained separately in `portable/`.
 - Exports `MISE_GLOBAL_CONFIG_FILE="$HOME/.config/mise/config.toml"` so devcontainer-provided mise shims resolve the portable global tools.
 - Imports mounted `~/.zsh_history` into Atuin once from `install/atuin.sh` when Atuin is available.
 - Stows Neovim, mise, yazi, and tmux config into `$HOME` from `stow/portable`.
@@ -43,6 +43,8 @@ stow/portable/.p10k.zsh     -> ~/.p10k.zsh
 
 ## Included Tools
 
+The exact mise tool list comes from the main dotfiles config when the portable repo is exported.
+
 System/package-manager tools include:
 
 - `bash`
@@ -61,25 +63,6 @@ Shell setup includes:
 - Powerlevel10k prompt theme
 - `zsh-autosuggestions`
 - `zsh-syntax-highlighting`
-
-`mise` installs:
-
-- `atuin`
-- `eza`
-- `fd`
-- `fzf`
-- `jq`
-- `k9s`
-- `kubectl`
-- `lazydocker`
-- `lazygit`
-- `lazysql`
-- `neovim`
-- `opencode`
-- `ripgrep`
-- `tmux`
-- `yazi`
-- `zoxide`
 
 ## Shell Aliases
 
