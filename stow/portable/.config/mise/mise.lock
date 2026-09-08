@@ -608,6 +608,25 @@ conda_deps = []
 version = "0.88.0"
 backend = "npm:@devcontainers/cli"
 
+[[tools.direnv]]
+version = "2.37.1"
+backend = "aqua:direnv/direnv"
+
+[tools.direnv."platforms.linux-arm64"]
+checksum = "sha256:2a9cef8d73521d6a3ec3f2871c4b747b8c4cc038628c1b57a7efa42b393a2d82"
+url = "https://github.com/direnv/direnv/releases/download/v2.37.1/direnv.linux-arm64"
+url_api = "https://api.github.com/repos/direnv/direnv/releases/assets/274610549"
+
+[tools.direnv."platforms.linux-x64"]
+checksum = "sha256:1f1b93dd6f38523fde26dfac96151ef9d31a374e3005cd3345fb93555ae0c9b5"
+url = "https://github.com/direnv/direnv/releases/download/v2.37.1/direnv.linux-amd64"
+url_api = "https://api.github.com/repos/direnv/direnv/releases/assets/274610548"
+
+[tools.direnv."platforms.macos-arm64"]
+checksum = "sha256:4f569f3a36732bfd8b8fea7bfcc6ad87a59745c109022164d0ca4832451d5369"
+url = "https://github.com/direnv/direnv/releases/download/v2.37.1/direnv.darwin-arm64"
+url_api = "https://api.github.com/repos/direnv/direnv/releases/assets/274610544"
+
 [[tools.eza]]
 version = "0.23.5"
 backend = "aqua:eza-community/eza"
@@ -731,23 +750,23 @@ checksum = "blake3:0658d7d370909cd4b308dae6250858bfc4b2de7fe092f93dac980548f9edf
 url = "https://github.com/tmux-plugins/tpm/archive/refs/heads/master.tar.gz"
 
 [[tools.java]]
-version = "26.0.2"
+version = "17.0.2"
 backend = "core:java"
 
 [tools.java.options]
 shorthand_vendor = "openjdk"
 
 [tools.java."platforms.linux-arm64"]
-checksum = "sha256:0ce6516c459e635d9f263f9b3492d83ec2c1ee26db128a6d904cae3d3096ceee"
-url = "https://download.java.net/java/GA/jdk26.0.2/818d462d89b645c7a1aad49066c454e5/10/GPL/openjdk-26.0.2_linux-aarch64_bin.tar.gz"
+checksum = "sha256:13bfd976acf8803f862e82c7113fb0e9311ca5458b1decaef8a09ffd91119fa4"
+url = "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-aarch64_bin.tar.gz"
 
 [tools.java."platforms.linux-x64"]
-checksum = "sha256:2da09e9db53e5c4f9eeec045f49e7d8fbcd8e4153edbf0c269f520ff82fd4198"
-url = "https://download.java.net/java/GA/jdk26.0.2/818d462d89b645c7a1aad49066c454e5/10/GPL/openjdk-26.0.2_linux-x64_bin.tar.gz"
+checksum = "sha256:0022753d0cceecacdd3a795dd4cea2bd7ffdf9dc06e22ffd1be98411742fbb44"
+url = "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz"
 
 [tools.java."platforms.macos-arm64"]
-checksum = "sha256:c99b35ad3063ef555361a243c44280b048e24e3cbbc4a59ee3b368e5a8958f3a"
-url = "https://download.java.net/java/GA/jdk26.0.2/818d462d89b645c7a1aad49066c454e5/10/GPL/openjdk-26.0.2_macos-aarch64_bin.tar.gz"
+checksum = "sha256:602d7de72526368bb3f80d95c4427696ea639d2e0cc40455f53ff0bbb18c27c8"
+url = "https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_macos-aarch64_bin.tar.gz"
 
 [[tools.jq]]
 version = "1.8.2"
@@ -917,23 +936,23 @@ checksum = "sha256:188ff6a716bcd40e33ac62f17f4aec9bd760164fa6a2cde66f779a5db4abc
 url = "https://github.com/anomalyco/opencode/releases/download/v1.18.11/opencode-darwin-arm64.zip"
 
 [[tools.pi]]
-version = "0.84.1"
+version = "0.85.1"
 backend = "aqua:earendil-works/pi"
 
 [tools.pi."platforms.linux-arm64"]
-checksum = "sha256:ab95c058a4651b5ff5d8c878e524edfb776263c7a444f325505f247c056eecfc"
-url = "https://github.com/earendil-works/pi/releases/download/v0.84.1/pi-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/504727596"
+checksum = "sha256:042d20ae885ee4f3b102815f3280b962c377b2e9fb44de4037908cc530eae4d4"
+url = "https://github.com/earendil-works/pi/releases/download/v0.85.1/pi-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/545797549"
 
 [tools.pi."platforms.linux-x64"]
-checksum = "sha256:5634d7ebd18274b63af3371e942f342d74bea012389575c1d1ff15ce6ca80c2f"
-url = "https://github.com/earendil-works/pi/releases/download/v0.84.1/pi-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/504727598"
+checksum = "sha256:494e498f47d74d21f40b3386f6a5e921a3d49531a169cab55bbdaca0ea1fe25a"
+url = "https://github.com/earendil-works/pi/releases/download/v0.85.1/pi-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/545797547"
 
 [tools.pi."platforms.macos-arm64"]
-checksum = "sha256:683c84261f40b870b4a7ccf181a48ad6ecd71853b0112d1bb617539530c6121d"
-url = "https://github.com/earendil-works/pi/releases/download/v0.84.1/pi-darwin-arm64.tar.gz"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/504727600"
+checksum = "sha256:d5f70e3c0cf7398eac239fd0261ee074d98b7ba7f6b43fe3617f052ed5b79d06"
+url = "https://github.com/earendil-works/pi/releases/download/v0.85.1/pi-darwin-arm64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/545797550"
 
 [[tools.pnpm]]
 version = "11.21.0"
