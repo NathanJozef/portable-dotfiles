@@ -373,25 +373,25 @@ url = "https://github.com/joshmedeski/sesh/releases/download/v2.28.0/sesh_Darwin
 url_api = "https://api.github.com/repos/joshmedeski/sesh/releases/assets/490857156"
 
 [[tools.atuin]]
-version = "18.18.1"
+version = "18.22.0"
 backend = "aqua:atuinsh/atuin"
 
 [tools.atuin."platforms.linux-arm64"]
-checksum = "sha256:4f7e08a2a852d849714e5c17618742058f95610b32d3db591a10f55b621df2bd"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.18.1/atuin-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/492109413"
+checksum = "sha256:591680ad8045f87f2b524a3654232a1e91b4ba7e8d52fe2d18885437a3fc5265"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.22.0/atuin-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/553690852"
 provenance = "github-attestations"
 
 [tools.atuin."platforms.linux-x64"]
-checksum = "sha256:732bcb4cbb57fa3bb7c9eaf1d866eabd673ba5f5978dc87fc6697369c5e8b33b"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.18.1/atuin-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/492109525"
+checksum = "sha256:920200b8e2ecff88eb8f2c2d4bfc4c62ed1c2f4efca2ba854a23bd157a542328"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.22.0/atuin-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/553690960"
 provenance = "github-attestations"
 
 [tools.atuin."platforms.macos-arm64"]
-checksum = "sha256:2c2bd7a4fb5a093cb222c5befb199bd09700f9b13b830c80a05dd5b2e7950457"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.18.1/atuin-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/492109389"
+checksum = "sha256:5e6e525f60147351f114397e7f09aeded87f302e99ef83a5eee74c524b805812"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.22.0/atuin-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/553690857"
 provenance = "github-attestations"
 
 [[tools.aws-sam-cli]]
@@ -1015,7 +1015,7 @@ url = "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15
 url_api = "https://api.github.com/repos/BurntSushi/ripgrep/releases/assets/478118851"
 
 [[tools.rust]]
-version = "1.97.1"
+version = "1.98.1"
 backend = "core:rust"
 
 [[tools.terraform]]
