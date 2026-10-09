@@ -420,19 +420,18 @@ url = "https://github.com/aws/aws-sam-cli/releases/download/v1.167.0/aws-sam-cli
 url_api = "https://api.github.com/repos/aws/aws-sam-cli/releases/assets/616432046"
 
 [[tools.awscli]]
-version = "2.37.10"
+version = "2.37.11"
 backend = "aqua:aws/aws-cli"
 
 [tools.awscli."platforms.linux-arm64"]
-checksum = "blake3:aa6e9564705d237049e20ad2beb01223ba62a2cde23dae6e5e8478f321486f10"
-url = "https://awscli.amazonaws.com/awscli-exe-linux-aarch64-2.37.10.zip"
+url = "https://awscli.amazonaws.com/awscli-exe-linux-aarch64-2.37.11.zip"
 
 [tools.awscli."platforms.linux-x64"]
-url = "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.37.10.zip"
+url = "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.37.11.zip"
 
 [tools.awscli."platforms.macos-arm64"]
-checksum = "blake3:bcdb3a4fe6935247ed593b5c2d240fc8b067edc60670c357f5479fbe734ce9c1"
-url = "https://awscli.amazonaws.com/AWSCLIV2-2.37.10.pkg"
+checksum = "blake3:37712a81d8ff59f96b9df57dff23c690b4c6103e154d8fd8641c97ba28ab31d6"
+url = "https://awscli.amazonaws.com/AWSCLIV2-2.37.11.pkg"
 
 [[tools.bat]]
 version = "0.26.1"
@@ -583,15 +582,15 @@ conda_deps = [
 ]
 
 [[tools."conda:tree-sitter-cli"]]
-version = "0.27.0"
+version = "0.27.1"
 backend = "conda:tree-sitter-cli"
 
 [tools."conda:tree-sitter-cli".options]
 channel = "conda-forge"
 
 [tools."conda:tree-sitter-cli"."platforms.linux-arm64"]
-checksum = "sha256:1dc6c2b342bf82d51f7847fc29964354d8133d07b5f5f9dc3a552e8af7dc3411"
-url = "https://conda.anaconda.org/conda-forge/linux-aarch64/tree-sitter-cli-0.27.0-h4f14f73_0.conda"
+checksum = "sha256:22bd563f0a854592fed1053f3015fe25445158dc6f8a8fe2268c55747e5872d9"
+url = "https://conda.anaconda.org/conda-forge/linux-aarch64/tree-sitter-cli-0.27.1-h4f14f73_0.conda"
 conda_deps = [
     "libgcc-16.2.0-h205dda4_7",
     "_openmp_mutex-4.5-20_gnu",
@@ -599,8 +598,8 @@ conda_deps = [
 ]
 
 [tools."conda:tree-sitter-cli"."platforms.linux-x64"]
-checksum = "sha256:b7fa9523db9091171f9d8e6c4f6aeef10ab9a6fdec5f63a5ad97f2bb8d3f40d1"
-url = "https://conda.anaconda.org/conda-forge/linux-64/tree-sitter-cli-0.27.0-hc7555a6_0.conda"
+checksum = "sha256:dd98cca00f70c120ed431c1a036888a6d07cb9f45ea32cf37bcd6ee0623db912"
+url = "https://conda.anaconda.org/conda-forge/linux-64/tree-sitter-cli-0.27.1-hc7555a6_0.conda"
 conda_deps = [
     "libgcc-16.2.0-ha9f2e26_7",
     "_openmp_mutex-4.5-20_gnu",
@@ -608,8 +607,8 @@ conda_deps = [
 ]
 
 [tools."conda:tree-sitter-cli"."platforms.macos-arm64"]
-checksum = "sha256:08aa654ba2854d39f67ececd956422275b78717804a083b1e381bb6091de5724"
-url = "https://conda.anaconda.org/conda-forge/osx-arm64/tree-sitter-cli-0.27.0-haee3d69_0.conda"
+checksum = "sha256:e2d4cc378e22ef4a6c8ed9e00959557bbcf54219f3481d8b5e76e19d68f7a606"
+url = "https://conda.anaconda.org/conda-forge/osx-arm64/tree-sitter-cli-0.27.1-haee3d69_0.conda"
 conda_deps = []
 
 [[tools.devcontainer-cli]]
@@ -947,42 +946,42 @@ url = "https://github.com/anomalyco/opencode/releases/download/v1.18.35/opencode
 url_api = "https://api.github.com/repos/anomalyco/opencode/releases/assets/616527957"
 
 [[tools.pi]]
-version = "1.0.4"
+version = "1.1.0"
 backend = "aqua:earendil-works/pi"
 
 [tools.pi."platforms.linux-arm64"]
-checksum = "sha256:6a6bc66a6ac2750bd7ccd7f2109090463f564d447feefb10a5965f6b6aed2211"
-url = "https://github.com/earendil-works/pi/releases/download/v1.0.4/pi-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/613707171"
+checksum = "sha256:f3b0cac459f9df5420e4e48b48e95d81bfab57b701dd3fe4b08fda7d11d27dab"
+url = "https://github.com/earendil-works/pi/releases/download/v1.1.0/pi-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/619962815"
 
 [tools.pi."platforms.linux-x64"]
-checksum = "sha256:284c45dd28cf975a13cff6af34741dd0a0cdca6634e8bdfc0083ae7d452e86d6"
-url = "https://github.com/earendil-works/pi/releases/download/v1.0.4/pi-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/613707163"
+checksum = "sha256:3faa94666cd3849d37af320ff749407d0271b07a9b94f420c87e30866e10e289"
+url = "https://github.com/earendil-works/pi/releases/download/v1.1.0/pi-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/619962805"
 
 [tools.pi."platforms.macos-arm64"]
-checksum = "sha256:717dcd38a03849e919f9dec9daa96f5ca102e15ea33d804e5db57b1d47e513bc"
-url = "https://github.com/earendil-works/pi/releases/download/v1.0.4/pi-darwin-arm64.tar.gz"
-url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/613707162"
+checksum = "sha256:3455b13de35c15a5893cdebc922678199e90a7ce99b06cbc23f37860e90d63c7"
+url = "https://github.com/earendil-works/pi/releases/download/v1.1.0/pi-darwin-arm64.tar.gz"
+url_api = "https://api.github.com/repos/earendil-works/pi/releases/assets/619962801"
 
 [[tools.pipx]]
-version = "1.17.11"
+version = "1.17.12"
 backend = "aqua:pypa/pipx"
 
 [tools.pipx."platforms.linux-arm64"]
-checksum = "sha256:ea1a87594acaddb6ed3956d587c07bcd28122c98943018d5469a225bcbc9d554"
-url = "https://github.com/pypa/pipx/releases/download/1.17.11/pipx.pyz"
-url_api = "https://api.github.com/repos/pypa/pipx/releases/assets/608756700"
+checksum = "sha256:e27cb4aecff5da2784d7d8e0ee64af6f01d12eead2668ec366f040dece79c93e"
+url = "https://github.com/pypa/pipx/releases/download/1.17.12/pipx.pyz"
+url_api = "https://api.github.com/repos/pypa/pipx/releases/assets/619690377"
 
 [tools.pipx."platforms.linux-x64"]
-checksum = "sha256:ea1a87594acaddb6ed3956d587c07bcd28122c98943018d5469a225bcbc9d554"
-url = "https://github.com/pypa/pipx/releases/download/1.17.11/pipx.pyz"
-url_api = "https://api.github.com/repos/pypa/pipx/releases/assets/608756700"
+checksum = "sha256:e27cb4aecff5da2784d7d8e0ee64af6f01d12eead2668ec366f040dece79c93e"
+url = "https://github.com/pypa/pipx/releases/download/1.17.12/pipx.pyz"
+url_api = "https://api.github.com/repos/pypa/pipx/releases/assets/619690377"
 
 [tools.pipx."platforms.macos-arm64"]
-checksum = "sha256:ea1a87594acaddb6ed3956d587c07bcd28122c98943018d5469a225bcbc9d554"
-url = "https://github.com/pypa/pipx/releases/download/1.17.11/pipx.pyz"
-url_api = "https://api.github.com/repos/pypa/pipx/releases/assets/608756700"
+checksum = "sha256:e27cb4aecff5da2784d7d8e0ee64af6f01d12eead2668ec366f040dece79c93e"
+url = "https://github.com/pypa/pipx/releases/download/1.17.12/pipx.pyz"
+url_api = "https://api.github.com/repos/pypa/pipx/releases/assets/619690377"
 
 [[tools."pipx:tmuxp"]]
 version = "1.74.0"
