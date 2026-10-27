@@ -359,25 +359,6 @@ checksum = "sha256:b6e6ac70d67f737cb8cf8e88a076e697f0b171518adc31d9c88f4e06856c8
 url = "https://github.com/jorgerojas26/lazysql/releases/download/v0.7.0/lazysql_Darwin_arm64.tar.gz"
 url_api = "https://api.github.com/repos/jorgerojas26/lazysql/releases/assets/634196712"
 
-[[tools."aqua:joshmedeski/sesh"]]
-version = "2.28.0"
-backend = "aqua:joshmedeski/sesh"
-
-[tools."aqua:joshmedeski/sesh"."platforms.linux-arm64"]
-checksum = "sha256:30249b47a0f60a2da557ecde76c169d0dbc82161b12aa46f9ed47af27a265dc6"
-url = "https://github.com/joshmedeski/sesh/releases/download/v2.28.0/sesh_Linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/joshmedeski/sesh/releases/assets/490857146"
-
-[tools."aqua:joshmedeski/sesh"."platforms.linux-x64"]
-checksum = "sha256:ac4a0b07f0be4cbb13691a197055ac82e00341e77b915d878df8ad2bcc867fda"
-url = "https://github.com/joshmedeski/sesh/releases/download/v2.28.0/sesh_Linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/joshmedeski/sesh/releases/assets/490857157"
-
-[tools."aqua:joshmedeski/sesh"."platforms.macos-arm64"]
-checksum = "sha256:112f0171ff7379c3f1f4317561f796fc6fd77af04320ed952711a38f96f7d30c"
-url = "https://github.com/joshmedeski/sesh/releases/download/v2.28.0/sesh_Darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/joshmedeski/sesh/releases/assets/490857156"
-
 [[tools.atuin]]
 version = "18.24.2"
 backend = "aqua:atuinsh/atuin"
@@ -424,6 +405,7 @@ version = "2.38.5"
 backend = "aqua:aws/aws-cli"
 
 [tools.awscli."platforms.linux-arm64"]
+checksum = "sha256:07711a936e9d271045ab937d2c2c5390c25f419e4ba9e25adb9e996031e3f6be"
 url = "https://awscli.amazonaws.com/awscli-exe-linux-aarch64-2.38.5.zip"
 
 [tools.awscli."platforms.linux-x64"]
@@ -749,6 +731,7 @@ backend = "http:tpm"
 strip_components = "1"
 
 [tools."http:tpm"."platforms.linux-arm64"]
+checksum = "sha256:e2fbc4d308b2bf8232b1f7034119fb4b63c61080bb78f372bcb567cc51b54070"
 url = "https://github.com/tmux-plugins/tpm/archive/refs/heads/master.tar.gz"
 
 [tools."http:tpm"."platforms.linux-x64"]
@@ -764,7 +747,7 @@ version = "27.0.1.0.3"
 backend = "core:java"
 
 [tools.java.options]
-shorthand_vendor = "openjdk"
+shorthand_vendor = "temurin"
 
 [tools.java."platforms.linux-arm64"]
 checksum = "sha256:a088a727fa3e76ebeadfa76ed9c1e9fecbdfa54ec752ecb669c38a8585e058a1"
@@ -876,12 +859,15 @@ version = "5.5.1"
 backend = "vfox:mise-plugins/vfox-lua"
 
 [tools.lua."platforms.linux-arm64"]
+checksum = "sha256:1c4b4068d67061f2a2231ad2b5422e77acea1487ea9890f6320af614f4373dce"
 url = "https://www.lua.org/ftp/lua-5.5.1.tar.gz"
 
 [tools.lua."platforms.linux-x64"]
+checksum = "sha256:1c4b4068d67061f2a2231ad2b5422e77acea1487ea9890f6320af614f4373dce"
 url = "https://www.lua.org/ftp/lua-5.5.1.tar.gz"
 
 [tools.lua."platforms.macos-arm64"]
+checksum = "sha256:1c4b4068d67061f2a2231ad2b5422e77acea1487ea9890f6320af614f4373dce"
 url = "https://www.lua.org/ftp/lua-5.5.1.tar.gz"
 
 [[tools.neovim]]
@@ -889,12 +875,15 @@ version = "0.12.6"
 backend = "vfox:mise-plugins/vfox-neovim"
 
 [tools.neovim."platforms.linux-arm64"]
+checksum = "sha256:8f1f64a0bdb97247034038c3823c6cbad5bdf9ecd5751b85494b71c3ee04c815"
 url = "https://github.com/neovim/neovim/releases/download/v0.12.6/nvim-linux-arm64.tar.gz"
 
 [tools.neovim."platforms.linux-x64"]
+checksum = "sha256:474430d53e6264f6d6dd18db42d6dc9df3a1b56ca9e88a325bbf860e1a811d87"
 url = "https://github.com/neovim/neovim/releases/download/v0.12.6/nvim-linux-x86_64.tar.gz"
 
 [tools.neovim."platforms.macos-arm64"]
+checksum = "sha256:1dbd148222b051ba6c307c4d17a318ed083df018a4f6a5a0ce46955ffc9ab87b"
 url = "https://github.com/neovim/neovim/releases/download/v0.12.6/nvim-macos-arm64.tar.gz"
 
 [[tools.node]]
@@ -918,6 +907,7 @@ version = "12.2.1"
 backend = "aqua:npm/cli"
 
 [tools.npm."platforms.linux-arm64"]
+checksum = "sha256:228bd64aaef23270dbdbd2cf3d5ef5c467602ef38c4066246cef1984adab9a67"
 url = "https://registry.npmjs.org/npm/-/npm-12.2.1.tgz"
 
 [tools.npm."platforms.linux-x64"]
