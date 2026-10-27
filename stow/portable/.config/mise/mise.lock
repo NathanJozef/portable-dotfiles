@@ -148,9 +148,9 @@ checksum = "sha256:819f944f269e3f46bc09a3902497da9bf8887ee779df66bd5a9db57abb204
 url = "https://conda.anaconda.org/conda-forge/linux-64/icu-78.3-py310h44b86e0_2.conda"
 checksum = "sha256:9f07834f0c546ab14d885ce0366285f61f44e326c0edd1fc63b8294e113ae432"
 
-[conda-packages.linux-x64."kernel-headers_linux-64-4.18.0-he073ed8_9"]
-url = "https://conda.anaconda.org/conda-forge/noarch/kernel-headers_linux-64-4.18.0-he073ed8_9.conda"
-checksum = "sha256:41557eeadf641de6aeae49486cef30d02a6912d8da98585d687894afd65b356a"
+[conda-packages.linux-x64."kernel-headers_linux-64-5.14.0-he073ed8_3"]
+url = "https://conda.anaconda.org/conda-forge/noarch/kernel-headers_linux-64-5.14.0-he073ed8_3.conda"
+checksum = "sha256:c4d973dd80ab10028b3e4c58c1c6d8f437bfeaf6069dafb1130dabc550e9caf4"
 
 [conda-packages.linux-x64."ld_impl_linux-64-2.46.1-default_hbd61a6d_103"]
 url = "https://conda.anaconda.org/conda-forge/linux-64/ld_impl_linux-64-2.46.1-default_hbd61a6d_103.conda"
@@ -208,9 +208,9 @@ checksum = "sha256:eb8a0db0aa570124f7d2a93d7c7f596e3390df5e047818d873baad32985fc
 url = "https://conda.anaconda.org/conda-forge/linux-64/llvm-openmp-23.1.4-h7148c6a_0.conda"
 checksum = "sha256:7de1204abbcf20aa8cb62c8a1385177ded2b7ca536b79c409866e46f30b0242f"
 
-[conda-packages.linux-x64."sysroot_linux-64-2.28-h4ee821c_9"]
-url = "https://conda.anaconda.org/conda-forge/noarch/sysroot_linux-64-2.28-h4ee821c_9.conda"
-checksum = "sha256:c47299fe37aebb0fcf674b3be588e67e4afb86225be4b0d452c7eb75c086b851"
+[conda-packages.linux-x64."sysroot_linux-64-2.34-h087de78_3"]
+url = "https://conda.anaconda.org/conda-forge/noarch/sysroot_linux-64-2.34-h087de78_3.conda"
+checksum = "sha256:08c50c314b331730eeb8f87c39a45e5426a5463e078392ab283e2552d753443e"
 
 [conda-packages.linux-x64.tzdata-2026e-h5d301ff_0]
 url = "https://conda.anaconda.org/conda-forge/noarch/tzdata-2026e-h5d301ff_0.conda"
@@ -389,9 +389,9 @@ url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/665441748"
 provenance = "github-attestations"
 
 [tools.atuin."platforms.linux-x64"]
-checksum = "sha256:005a4953f2fe96d4506fee7d926de73ec8cf64c89b2a07acd39bfa4fd88c0449"
-url = "https://github.com/atuinsh/atuin/releases/download/v18.24.2/atuin-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/665441954"
+checksum = "sha256:311cd1ba4b8be27de7071dbcae1c95ff4c2b38aeec82d557707b6b832bfceddf"
+url = "https://github.com/atuinsh/atuin/releases/download/v18.24.2/atuin-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/atuinsh/atuin/releases/assets/665441992"
 provenance = "github-attestations"
 
 [tools.atuin."platforms.macos-arm64"]
@@ -427,6 +427,7 @@ backend = "aqua:aws/aws-cli"
 url = "https://awscli.amazonaws.com/awscli-exe-linux-aarch64-2.38.5.zip"
 
 [tools.awscli."platforms.linux-x64"]
+checksum = "blake3:57ff61a49c4f3ea209a9468a4fffdade33d2051808895597bf30e799bd74cd02"
 url = "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.38.5.zip"
 
 [tools.awscli."platforms.macos-arm64"]
@@ -526,8 +527,8 @@ conda_deps = [
     "compiler-rt23_linux-64-23.1.4-h0e38de2_0",
     "binutils-2.46.1-default_h4852527_103",
     "libgcc-devel_linux-64-16.2.0-he3ce08f_107",
-    "sysroot_linux-64-2.28-h4ee821c_9",
-    "kernel-headers_linux-64-4.18.0-he073ed8_9",
+    "sysroot_linux-64-2.34-h087de78_3",
+    "kernel-headers_linux-64-5.14.0-he073ed8_3",
     "libstdcxx-16.2.0-h934c35e_7",
     "libgcc-16.2.0-ha9f2e26_7",
     "libzlib-1.3.2-h25fd6f3_3",
@@ -920,6 +921,7 @@ backend = "aqua:npm/cli"
 url = "https://registry.npmjs.org/npm/-/npm-12.2.1.tgz"
 
 [tools.npm."platforms.linux-x64"]
+checksum = "blake3:b38b043f13b44b58ff4bf223c3345e3b23ee72347aa1a60a2b1d1f669b922f00"
 url = "https://registry.npmjs.org/npm/-/npm-12.2.1.tgz"
 
 [tools.npm."platforms.macos-arm64"]
@@ -1010,22 +1012,22 @@ url_api = "https://api.github.com/repos/pnpm/pnpm/releases/assets/662173343"
 provenance = "github-attestations"
 
 [[tools.python]]
-version = "3.15.1"
+version = "3.15.2"
 backend = "core:python"
 
 [tools.python."platforms.linux-arm64"]
-checksum = "sha256:6efe65c43ae0bdebebeab4607f91a0053dd36d5e51cfd69a791d544e9b122be7"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20261021/cpython-3.15.1+20261021-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz"
+checksum = "sha256:0f23351c03b39beb880de668976074fcc3c082d9c3b03d0b43185632b2b270a0"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20261026/cpython-3.15.2+20261026-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz"
 provenance = "github-attestations"
 
 [tools.python."platforms.linux-x64"]
-checksum = "sha256:01d901e09ca673c99a6c9bd9ec2cfbd58dbe8813d07514c36cb73cfd20b18bd8"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20261021/cpython-3.15.1+20261021-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz"
+checksum = "blake3:4f6adbe78f37b3a76dea0abce4e5e927b930e206c41fd90bcd587625aa455629"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20261026/cpython-3.15.2+20261026-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz"
 provenance = "github-attestations"
 
 [tools.python."platforms.macos-arm64"]
-checksum = "blake3:091b3bc1da195d3a72c2e65464f4679473516b90095693d325443bac43706622"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20261021/cpython-3.15.1+20261021-aarch64-apple-darwin-install_only_stripped.tar.gz"
+checksum = "sha256:1b1b03fca8aa351698403f3d100ee83db7a5d99748fc7707681ac31a6a846ad9"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20261026/cpython-3.15.2+20261026-aarch64-apple-darwin-install_only_stripped.tar.gz"
 provenance = "github-attestations"
 
 [[tools.ripgrep]]
